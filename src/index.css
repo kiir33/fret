@@ -13,12 +13,12 @@ code {
 }
 
 .carousel-container{
-  height: 60vh;
+  height: 70vh;
 }
 
 .carousel-image{
   width: 100wh;
-  height: 60vh;
+  height: 70vh;
   object-fit: cover;
 }
 
