@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const HomeCarousel = () => {
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" id="home">
       <Carousel className="carousel-container" showThumbs={false}
       useKeyboardArrows={true} infiniteLoop={true} >
                 <div>

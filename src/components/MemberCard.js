@@ -2,12 +2,12 @@ import React from 'react'
 import Truncate from 'react-truncate'
 const MemberCard = ({ image, title, details }) => {
   return (
-    <div className="card bg-body shadow-lg col-4 my-4 mx-auto" style={{ width: '18rem' }}>
+    <div className="card bg-body shadow col-4 my-4 mx-auto p-0" style={{ width: '18rem' }}>
       <img className="card-img-top" src={image} alt="Card image cap" />
       <div className="card-body">
         <p className="card-title h5 text-center mb-2">{title}</p>
         <p className="text-justify fw-light">
-          <Truncate lines={3} ellipsis={<span>...
+          <Truncate lines={5} ellipsis={<span>...
             <a className="btn text-primary fw-light fs-6" href='#'>Read more</a></span>}>
             {details}
           </Truncate>

@@ -7,13 +7,14 @@ const KnowUs = () => {
   const names = ['Yajoo Acharya', 'Prabin Lakhaju', 'Roshik Jadhari']
 
   return (
-    <div className="bg-light py-4 mb-5">
+    <div className="bg-light p-4 my-4" id="know_us">
       <p className="h2 text-center">Know Us</p>
 
-      <div className="d-flex">
+      <div className="row">
 
         {names.map((name, i) =>
-          <MemberCard image={images[i]} title={name} details={details[i]} key={i} />)}
+          <MemberCard image={images[i]} title={name} details={details[i]}
+            pos={i} lastItem={names.length - 1} key={i} />)}
       </div>
 
     </div>

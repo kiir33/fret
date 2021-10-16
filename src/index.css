@@ -13,13 +13,23 @@ code {
 }
 
 .carousel-container{
-  height: 70vh;
+  height: 60vh;
 }
 
 .carousel-image{
   width: 100wh;
-  height: 70vh;
+  height: 60vh;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-container{
+    height: 40vh;
+  }
+
+  .carousel-image{
+    height: 40vh;
+  }
 }
 
 .member-img{
