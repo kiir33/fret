@@ -8,7 +8,7 @@ const Videos = () => {
 
       {
         videoLinks.map((item, i) => (
-          <VideoCard video={item} key={i} />
+          <VideoCard videoLink={item} key={i} />
         ))
       }
 
@@ -18,16 +18,10 @@ const Videos = () => {
 
 export default Videos
 
-const videoStyle = {
-  maxWidth: '100%',
-  height: 'auto',
-  minHeight: '240px',
-  borderRadius: '4px'
-}
+
 
 const videoLinks = [
-  <iframe style={videoStyle} src="https://www.youtube.com/embed/wxPM8ueY-gc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
-  <iframe style={videoStyle} src="https://www.youtube.com/embed/wxPM8ueY-gc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
-  <iframe style={videoStyle} src="https://www.youtube.com/embed/wxPM8ueY-gc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
+  "https://www.youtube.com/embed/Xed9YL3tXiU",
+  "https://www.youtube.com/embed/_cqPL7Lvi50",
 ]
 
