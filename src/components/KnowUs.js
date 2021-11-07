@@ -3,11 +3,7 @@ import yajoo from '../images/cover.jpg'
 import MemberCard from './MemberCard'
 
 const KnowUs = ({toggle}) => {
-  const images = [yajoo, yajoo, yajoo]
-  const names = ['Yajoo Acharya', 'Prabin Lakhaju', 'Roshik Jadhari']
-
   
-
   return (
     <div className="bg-light p-4 my-4" id="know_us">
       <p className="h2 text-center">Know Us</p>
@@ -25,7 +21,9 @@ const KnowUs = ({toggle}) => {
 
 export default KnowUs
 
-const details = [
+export const names = ['Yajoo Acharya', 'Prabin Lakhaju', 'Roshik Jadhari']
+export const images = [yajoo, yajoo, yajoo]
+export const details = [
   "Fret is an instrumental trio from Nepal, creating new form of music, \
   furnishing fusion grooves in an evolved manner blending traditional and \
   ethnic music with an influence of eastern classical, western music and world \

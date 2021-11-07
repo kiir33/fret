@@ -6,14 +6,18 @@ import KnowUs from "./components/KnowUs";
 import Navbar from "./components/Navbar";
 import Videos from "./components/Videos";
 import ContactUs from "./components/ContactUs";
+import { names, images, details } from "./components/KnowUs";
 
 
 function App() {
+  const [dialogPos, setDialogPos] = useState(0)
+  const [dialogVisible, setDialogVisible] = useState(false)
 
-  const [dialogVisible, setdialogVisible] = useState(false)
-  const toggle = () => {
+  const toggle = (pos) => {
+    setDialogPos(pos)
+    console.log(pos);
     let newState = !dialogVisible
-    setdialogVisible(newState)
+    setDialogVisible(newState)
   }
 
   return (
@@ -24,13 +28,14 @@ function App() {
         <Intro />
         <KnowUs toggle={toggle} />
         <Videos />
-        <ContactUs/>
+        <ContactUs />
       </div>
       {
         dialogVisible &&
         <div>
           <div className="dialog-background" onClick={toggle}></div>
-          <MemberDetailDialog toggle={toggle} details={details[0]} />
+          <MemberDetailDialog toggle={toggle}
+          title={names[dialogPos]} image={images[dialogPos]} details={details[dialogPos]} />
         </div>
       }
     </div>
@@ -38,60 +43,3 @@ function App() {
 }
 
 export default App;
-
-const details = [
-  "Fret is an instrumental trio from Nepal, creating new form of music, \
-  furnishing fusion grooves in an evolved manner blending traditional and \
-  ethnic music with an influence of eastern classical, western music and world \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  help of Himalayan Light Culture House.",
-  "Fret is an instrumental trio from Nepal, creating new form of music, \
-  furnishing fusion grooves in an evolved manner blending traditional and \
-  ethnic music with an influence of eastern classical, western music and world \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  help of Himalayan Light Culture House.",
-  "Fret is an instrumental trio from Nepal, creating new form of music, \
-  furnishing fusion grooves in an evolved manner blending traditional and \
-  ethnic music with an influence of eastern classical, western music and world \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  help of Himalayan Light Culture House.",
-]
