@@ -28,6 +28,12 @@ const ContactUs = () => {
           <a href={insta} target="_blank" className="btn text-info mx-1"><i class="fab fs-2 fa-instagram"></i> </a>
           <a href={youtube} target="_blank" className="btn text-info mx-1"><i class="fab fs-2 fa-youtube"></i> </a>
         </p>
+        <div className="d-flex mt-4">
+        <p className="text-secondary me-auto" style={{fontSize:'14px'}}>
+              Fret &copy; 2021</p>
+            <p className="text-secondary ms-auto" style={{fontSize:'14px'}}>
+              Designed &amp; developed by: Er. Kiran Banmala</p>
+          </div>
       </div>
     </div>
   )
