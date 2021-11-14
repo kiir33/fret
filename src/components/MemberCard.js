@@ -3,7 +3,7 @@ import Truncate from 'react-truncate'
 const MemberCard = ({ image, title, details, pos, toggle }) => {
   return (
     <div className="card bg-body shadow col-4 my-4 mx-auto p-0" style={{ width: '18rem' }}>
-      <img className="card-img-top" src={image} alt="Card image cap" />
+      <img className="card-img-top card-member-img" src={image} alt="Image" />
       <div className="card-body">
         <p className="card-title h5 text-center mb-2">{title}</p>
         <p className="text-justify fw-light">

@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import yajoo from '../images/cover.jpg'
+import yajoo from '../images/yajoo.png'
+import prabin from '../images/prabin.png'
+import roshik from '../images/roshik.png'
 import MemberCard from './MemberCard'
 
 const KnowUs = ({toggle}) => {
   
   return (
-    <div className="bg-light p-4 my-4" id="know_us">
+    <div className="bg-light p-4 my-4 rounded" id="know_us">
       <p className="h2 text-center">Know Us</p>
 
       <div className="row">
@@ -22,50 +24,31 @@ const KnowUs = ({toggle}) => {
 export default KnowUs
 
 export const names = ['Yajoo Acharya', 'Prabin Lakhaju', 'Roshik Jadhari']
-export const images = [yajoo, yajoo, yajoo]
+export const images = [yajoo, prabin, roshik]
 export const details = [
-  "Fret is an instrumental trio from Nepal, creating new form of music, \
-  furnishing fusion grooves in an evolved manner blending traditional and \
-  ethnic music with an influence of eastern classical, western music and world \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  help of Himalayan Light Culture House.",
+  "Yajoo is a young enthusiast flutist from Bhaktapur who has completed her graduation in Music, \
+  flute as a major from Rabindra Bharati University, Kolkata, India. She was a winner of 23rd \
+  Bal Sastriya Sangeet competition held by Kirateswor Sangeet Ashram 0n 2016.  She used to play \
+  as a band member of Gorkhali Girls Band. She has been actively participating in many musical \
+  events. She has been learning flute from her very early age and moving on with the wide view \
+  of contributing through her music.",
   
-  "Fret is an instrumental trio from Nepal, creating new form of music, \
-  furnishing fusion grooves in an evolved manner blending traditional and \
-  ethnic music with an influence of eastern classical, western music and world \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  help of Himalayan Light Culture House.",
+  "Prabin Lakhaju, an enthusiast percussionist from Bhaktapur  who has been learning and \
+  performing music since his childhood is engaged with newari Dapha traditions and now \
+  studying Ethnomusicology in Kathmandu University, Department of Music.  He is an active \
+  practitioner of Dapha Traditions. Later on, after joining the Department of Music, Kathmandu \
+  University, he has been learning North Indian Classical Music especially vocal, tabla and \
+  Navabaja ensemble. \
+  He has been involved in project Folklok as a researcher. He is working as a music teacher \
+  and as an ethnomusicologist in his locality and reviving music which has been lost in the \
+  past few years. He has collaborated with different artists and musicians at Bhaktapur in \
+  different events. He also had been involved in Theatre shows as a background musician at \
+  Aastha Theatre, Bhaktapur and Kunja Natak Ghar, New Baneshwor.",
 
-  "Fret is an instrumental trio from Nepal, creating new form of music, \
-  furnishing fusion grooves in an evolved manner blending traditional and \
-  ethnic music with an influence of eastern classical, western music and world \
-  music through Sarangi, Flute and Newari drums.\
-  Here's a small Solitude from fret for project Naadhe \"Khola Ra Kharani\".\
-  We have more artists, poets and performance art in this list.\
-  All the performing artists in \"khola ra kharani\" will be provided a space \
-  in the upcoming collaborative project extend play of art & music.\
-  Which is also a Monthly collaborative workshop organized by Naadhe with the \
-  help of Himalayan Light Culture House.",
+  "Roshik Jadhari is a young artist from Bhaktapur who has been playing different musical \
+  instrument from his early childhood. He used to play in Band Khalimalicha, and teaching \
+  music in Mukti Sangeet Prasikshyan Kendra, Bhaktapur.  He is studying Ethnomusicology in \
+  Kathmandu University, Department of music. Beside Sarangi, he has been learning and performing \
+  flute and newari instruments in different places. He has been playing vital role to preserve \
+  the endangered Mwali Baja.",
 ]

@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark rounded" style={{maxWidth: '1024px', margin:'auto'}}>
         <div className="container-fluid">
           <a className="navbar-brand" href="#home">FRET</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,10 @@ const Navbar = () => {
                 <a className="nav-link" href="#our_creations">Our Creations</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link">Performances</a>
+                <a className="nav-link" href="#performances">Performances</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact_us">Contact Us</a>
               </li>
             </ul>
           </div>
