@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Videos from "./components/Videos";
 import ContactUs from "./components/ContactUs";
 import { names, images, details } from "./components/KnowUs";
-import Performances from "./components/Performances";
+// import Performances from "./components/Performances";
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
         {
           dialogVisible &&
           <div>
-            <div className="dialog-background" onClick={toggle}></div>
+            <div className="dialog-background" onClick={toggle}/>
             <MemberDetailDialog toggle={toggle}
               title={names[dialogPos]} image={images[dialogPos]} details={details[dialogPos]} />
           </div>
