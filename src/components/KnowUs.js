@@ -1,30 +1,34 @@
-import React, { useState } from 'react'
-import yajoo from '../images/yajoo.png'
-import prabin from '../images/prabin.png'
-import roshik from '../images/roshik.png'
-import MemberCard from './MemberCard'
+import React, { useState } from "react";
+import yajoo from "../images/yajoo.png";
+import prabin from "../images/prabin.png";
+import roshik from "../images/roshik.png";
+import MemberCard from "./MemberCard";
 
-const KnowUs = ({toggle}) => {
-  
+const KnowUs = ({ toggle }) => {
   return (
     <div className="bg-light p-4 my-4 rounded" id="know_us">
       <p className="h2 text-center">Know Us</p>
 
       <div className="row">
-
-        {names.map((name, i) =>
-          <MemberCard image={images[i]} title={name} details={details[i]}
-            pos={i} lastItem={names.length - 1} toggle={toggle} key={i} />)}
+        {names.map((name, i) => (
+          <MemberCard
+            image={images[i]}
+            title={name}
+            details={details[i]}
+            pos={i}
+            toggle={toggle}
+            key={i}
+          />
+        ))}
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default KnowUs
+export default KnowUs;
 
-export const names = ['Yajoo Acharya', 'Prabin Lakhaju', 'Roshik Jadhari']
-export const images = [yajoo, prabin, roshik]
+export const names = ["Yajoo Acharya", "Prabin Lakhaju", "Roshik Jadhari"];
+export const images = [yajoo, prabin, roshik];
 export const details = [
   "Yajoo is a young enthusiast flutist from Bhaktapur who has completed her graduation in Music, \
   flute as a major from Rabindra Bharati University, Kolkata, India. She was a winner of 23rd \
@@ -32,7 +36,7 @@ export const details = [
   as a band member of Gorkhali Girls Band. She has been actively participating in many musical \
   events. She has been learning flute from her very early age and moving on with the wide view \
   of contributing through her music.",
-  
+
   "Prabin Lakhaju, an enthusiast percussionist from Bhaktapur  who has been learning and \
   performing music since his childhood is engaged with newari Dapha traditions and now \
   studying Ethnomusicology in Kathmandu University, Department of Music.  He is an active \
@@ -51,4 +55,4 @@ export const details = [
   Kathmandu University, Department of music. Beside Sarangi, he has been learning and performing \
   flute and newari instruments in different places. He has been playing vital role to preserve \
   the endangered Mwali Baja.",
-]
+];
