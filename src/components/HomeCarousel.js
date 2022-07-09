@@ -4,12 +4,37 @@ import { Carousel } from 'react-responsive-carousel';
 import fret1 from '../images/fret-1.jpg'
 import fret2 from '../images/fret-2.jpg'
 import fret3 from '../images/fret-3.png'
+import fret4 from '../images/fret-4.jpg'
+import fret5 from '../images/fret-5.jpg'
+import fret6 from '../images/fret-6.jpg'
+import fret7 from '../images/fret-7.jpg'
+import fret8 from '../images/fret-8.jpg'
 
 const HomeCarousel = () => {
   return (
     <div className="carousel-container" id="home">
       <Carousel className="carousel-container" showThumbs={false}
       useKeyboardArrows={true} infiniteLoop={true} >
+                <div>
+                    <img src={fret4} className="carousel-image rounded" />
+                    <p className="legend text-info">FRET</p>
+                </div>
+                <div>
+                    <img src={fret6} className="carousel-image rounded" />
+                    {/* <p className="legend text-info">FRET</p> */}
+                </div>
+                <div>
+                    <img src={fret7} className="carousel-image rounded" />
+                    {/* <p className="legend text-info">FRET</p> */}
+                </div>
+                <div>
+                    <img src={fret8} className="carousel-image rounded" />
+                    <p className="legend text-info">FRET with NIGHT</p>
+                </div>
+                <div>
+                    <img src={fret5} className="carousel-image rounded" />
+                    <p className="legend text-info">Baaja Gaja Chowk</p>
+                </div>
                 <div>
                     <img src={fret1} className="carousel-image rounded" />
                     <p className="legend text-info">Performance at Bikalpa Art Center</p>

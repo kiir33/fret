@@ -1,6 +1,12 @@
 import React from 'react'
 import VideoCard from './VideoCard'
 
+const videoLinks = [
+  "https://www.youtube.com/embed/Xed9YL3tXiU",
+  "https://www.youtube.com/embed/_cqPL7Lvi50",
+  "https://www.youtube.com/embed/THPkX2oq-4c"
+]
+
 const Videos = () => {
   return (
     <div className="row my-4 p-4">
@@ -17,11 +23,3 @@ const Videos = () => {
 }
 
 export default Videos
-
-
-
-const videoLinks = [
-  "https://www.youtube.com/embed/Xed9YL3tXiU",
-  "https://www.youtube.com/embed/_cqPL7Lvi50",
-]
-
