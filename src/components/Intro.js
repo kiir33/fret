@@ -9,7 +9,8 @@ const Intro = () => {
           Fret is an instrumental trio from Nepal, creating new form of music, furnishing 
           fusion grooves in an evolved manner blending traditional and ethnic music with an 
           influence of eastern classical, western music and world music through Sarangi, Flute 
-          and Newari drums.
+          and Newari drums. 
+          Fret Nepal.
          </p>
       </div>
       {/* <div className="mx-auto my-2 col-md-12 col-lg-4">
