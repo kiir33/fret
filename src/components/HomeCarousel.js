@@ -1,14 +1,14 @@
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import fret1 from '../images/fret-1.jpg'
-import fret2 from '../images/fret-2.jpg'
-import fret3 from '../images/fret-3.png'
-import fret4 from '../images/fret-4.jpg'
-import fret5 from '../images/fret-5.jpg'
-import fret6 from '../images/fret-6.jpg'
-import fret7 from '../images/fret-7.jpg'
-import fret8 from '../images/fret-8.jpg'
+import fret1 from '../images/homepage/fret-1.jpg'
+import fret2 from '../images/homepage/fret-2.jpg'
+import fret3 from '../images/homepage/fret-3.png'
+import fret4 from '../images/homepage/fret-4.jpg'
+import fret5 from '../images/homepage/fret-5.jpg'
+import fret6 from '../images/homepage/fret-6.jpg'
+import fret7 from '../images/homepage/fret-7.jpg'
+import fret8 from '../images/homepage/fret-8.jpg'
 
 const HomeCarousel = () => {
   return (

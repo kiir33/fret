@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import PerformanceCard from "./PerformanceCard";
-import eitv_img from "../images/fret-eitv.jpg";
-import naadhe_img from "../images/fret-naadhe.jpg";
-import ritu_img from "../images/fret-ritu.jpg";
-import electrowave_img from "../images/fret-ktm.jpg";
-import raaga_img from "../images/fret-raaga.jpg";
-import seto_naadh_img from "../images/seto_naadh.jpg";
-import four_20_img from "../images/four_20.jpg";
-import baja_gaja_img from "../images/baja_gaja.jpg";
+import eitv_img from "../images/performances/fret-eitv.jpg";
+import naadhe_img from "../images/performances/fret-naadhe.jpg";
+import ritu_img from "../images/performances/fret-ritu.jpg";
+import electrowave_img from "../images/performances/fret-ktm.jpg";
+import raaga_img from "../images/performances/fret-raaga.jpg";
+import seto_naadh_img from "../images/performances/seto_naadh.jpg";
+import four_20_img from "../images/performances/four_20.jpg";
+import baja_gaja_img from "../images/performances/baja_gaja.jpg";
 
 const Performances = () => {
   let eitv_opener_url = "https://youtu.be/5RclRxiWSJA?t=2456";

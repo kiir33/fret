@@ -8,6 +8,7 @@ import Videos from "./components/Videos";
 import ContactUs from "./components/ContactUs";
 import { names, images, details } from "./components/KnowUs";
 import Performances from "./components/Performances";
+import OurInitiations from "./components/OurInitiations";
 
 function App() {
   const [dialogPos, setDialogPos] = useState(0);
@@ -29,7 +30,8 @@ function App() {
           <Intro />
           <KnowUs toggle={toggle} />
           <Videos />
-          {<Performances />}
+          <Performances />
+          <OurInitiations/>
           <ContactUs />
         </div>
         {dialogVisible && (
