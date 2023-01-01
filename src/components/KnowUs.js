@@ -1,6 +1,6 @@
 import React from "react";
 import yajoo from "../images/members/yajoo.jpg";
-import prabin from "../images/members/prabin.png";
+import prabin from "../images/members/prabin.jpg";
 import roshik from "../images/members/roshik.png";
 import MemberCard from "./MemberCard";
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MemberDetailDialog from "./components/MemberDetailDialog";
-import HomeCarousel from "./components/HomeCarousel";
+// import HomeCarousel from "./components/HomeCarousel";
 import Intro from "./components/Intro";
 import KnowUs from "./components/KnowUs";
 import Navbar from "./components/Navbar";
@@ -9,6 +9,7 @@ import ContactUs from "./components/ContactUs";
 import { names, images, details } from "./components/KnowUs";
 import Performances from "./components/Performances";
 import OurInitiations from "./components/OurInitiations";
+import FeaturedVideo from "./components/FeatureVideo";
 
 function App() {
   const [dialogPos, setDialogPos] = useState(0);
@@ -26,10 +27,12 @@ function App() {
       <div className="secondary-container">
         <Navbar />
         <div className="mt-5 pt-2">
-          <HomeCarousel />
+          <FeaturedVideo />
+          {/* <HomeCarousel /> */}
+          <hr/>
           <Videos />
           <Performances />
-          <OurInitiations/>
+          <OurInitiations />
           <Intro />
           <KnowUs toggle={toggle} />
           <ContactUs />

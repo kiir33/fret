@@ -1,9 +1,12 @@
 import React from "react";
-import ambience from "../images/initiations/ambience.png";
 import InitiationCard from "./InitiationCard";
+import ambience from "../images/initiations/ambience.png";
+import aob1 from "../images/initiations/aob1.jpg";
+import aob2 from "../images/initiations/aob2.jpg";
+import aob3 from "../images/initiations/aob3.jpg";
 
 const names = ["Ambience of Bhaktapur"];
-const images = [ambience];
+const images = [ambience, aob1, aob2, aob3];
 const details = [
   <p>
     Bhaktapur is well known all over the world for its culture, heritage and
@@ -34,7 +37,7 @@ const OurInitiations = () => {
       <div className="row">
         {names.map((name, i) => (
           <InitiationCard
-            image={images[i]}
+            images={images}
             title={name}
             details={details[i]}
             pos={i}
