@@ -11,43 +11,44 @@ import fret7 from '../images/homepage/fret-7.jpg'
 import fret8 from '../images/homepage/fret-8.jpg'
 
 const HomeCarousel = () => {
+  const text4 = 'FRET';
   return (
     <div className="carousel-container" id="home">
       <Carousel className="carousel-container" showThumbs={false}
-      useKeyboardArrows={true} infiniteLoop={true} >
-                <div>
-                    <img src={fret4} className="carousel-image rounded" />
-                    <p className="legend text-info">FRET</p>
-                </div>
-                <div>
-                    <img src={fret6} className="carousel-image rounded" />
-                    {/* <p className="legend text-info">FRET</p> */}
-                </div>
-                <div>
-                    <img src={fret7} className="carousel-image rounded" />
-                    {/* <p className="legend text-info">FRET</p> */}
-                </div>
-                <div>
-                    <img src={fret8} className="carousel-image rounded" />
-                    <p className="legend text-info">FRET with NIGHT</p>
-                </div>
-                <div>
-                    <img src={fret5} className="carousel-image rounded" />
-                    <p className="legend text-info">Baaja Gaja Chowk</p>
-                </div>
-                <div>
-                    <img src={fret1} className="carousel-image rounded" />
-                    <p className="legend text-info">Performance at Bikalpa Art Center</p>
-                </div>
-                <div>
-                    <img src={fret2} className="carousel-image rounded" />
-                    <p className="legend text-info">Fret Performing at Patan</p>
-                </div>
-                <div>
-                    <img src={fret3} className="carousel-image rounded" />
-                    <p className="legend text-info">Raaga Chikitsa</p>
-                </div>
-            </Carousel>
+        useKeyboardArrows={true} infiniteLoop={true} >
+        <div>
+          <img src={fret4} className="carousel-image rounded" alt={text4} />
+          <p className="legend text-info">{text4}</p>
+        </div>
+        <div>
+          <img src={fret6} className="carousel-image rounded" alt={text4} />
+          {/* <p className="legend text-info">FRET</p> */}
+        </div>
+        <div>
+          <img src={fret7} className="carousel-image rounded" alt={text4} />
+          {/* <p className="legend text-info">FRET</p> */}
+        </div>
+        <div>
+          <img src={fret8} className="carousel-image rounded" alt={text4} />
+          <p className="legend text-info">FRET with NIGHT</p>
+        </div>
+        <div>
+          <img src={fret5} className="carousel-image rounded" alt={text4} />
+          <p className="legend text-info">Baaja Gaja Chowk</p>
+        </div>
+        <div>
+          <img src={fret1} className="carousel-image rounded" alt={text4} />
+          <p className="legend text-info">Performance at Bikalpa Art Center</p>
+        </div>
+        <div>
+          <img src={fret2} className="carousel-image rounded" alt={text4} />
+          <p className="legend text-info">Fret Performing at Patan</p>
+        </div>
+        <div>
+          <img src={fret3} className="carousel-image rounded" alt={text4} />
+          <p className="legend text-info">Raaga Chikitsa</p>
+        </div>
+      </Carousel>
     </div>
   )
 }
