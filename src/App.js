@@ -27,11 +27,11 @@ function App() {
         <Navbar />
         <div className="mt-5 pt-2">
           <HomeCarousel />
-          <Intro />
-          <KnowUs toggle={toggle} />
           <Videos />
           <Performances />
           <OurInitiations/>
+          <Intro />
+          <KnowUs toggle={toggle} />
           <ContactUs />
         </div>
         {dialogVisible && (

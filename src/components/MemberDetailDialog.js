@@ -15,7 +15,7 @@ const MemberDetailDialog = ({ title, details, image, toggle }) => {
         <div className="dialog-inner">
           {/* <p className="h3 text-center">{title}</p> */}
           <div className="d-flex">
-            <img className="dialog-img mx-auto mb-4" src={image} alt="Card image cap" /><br />
+            <img className="dialog-img mx-auto mb-4" src={image} alt={title} /><br />
           </div>
           {details}
         </div>
