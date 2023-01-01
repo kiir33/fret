@@ -28,10 +28,10 @@ function App() {
         <div className="mt-5 pt-2">
           <HomeCarousel />
           <Intro />
-          <KnowUs toggle={toggle} />
           <Videos />
           <Performances />
           <OurInitiations/>
+          <KnowUs toggle={toggle} />
           <ContactUs />
         </div>
         {dialogVisible && (
