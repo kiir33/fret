@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ambience from "../images/initiations/ambience.png";
 import InitiationCard from "./InitiationCard";
 
@@ -26,7 +26,7 @@ const details = [
   </p>,
 ];
 
-const OurInitiations = ({}) => {
+const OurInitiations = () => {
   return (
     <div className="bg-light p-4 my-4 rounded" id="initiations">
       <p className="h2 text-center">Our Initiations</p>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PerformanceCard from "./PerformanceCard";
 import eitv_img from "../images/performances/fret-eitv.jpg";
 import naadhe_img from "../images/performances/fret-naadhe.jpg";

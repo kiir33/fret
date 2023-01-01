@@ -6,7 +6,7 @@ const PerformanceCard = ({ image, title, pos, handleClick }) => {
       style={{ width: "18rem" }}
       onClick={() => handleClick(pos)}
     >
-      <img className="card-img-top card-member-img" src={image} alt="Image" />
+      <img className="card-img-top card-member-img" src={image} alt={title} />
       <div className="card-body">
         <p className="card-title h5 text-center mb-2">{title}</p>
       </div>

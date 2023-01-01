@@ -4,7 +4,7 @@ const InitiationCard = ({ image, title, details }) => {
     <div className="my-4 p-0">
       <p className="h5 mx-2">{title}</p>
       <div className="text-justify ps-2">
-        <img className="img-initiations rounded-2" src={image} alt="Image" />
+        <img className="img-initiations rounded-2" src={image} alt={title} />
         <p className="fw-light">{details}</p>
       </div>
     </div>
