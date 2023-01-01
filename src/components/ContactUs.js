@@ -10,7 +10,7 @@ const ContactUs = () => {
 
   return (
     <div className="bg-dark text-light text-center rounded p-4" id="contact_us">
-      <div className="text-center h4" id="contact_us">Contact Us</div>
+      <div className="text-center h4" id="contact_us">Contact</div>
       <hr />
       <div className="container mt-4">
         <a href={'mailto:' + email} target="_blank" className="text-info btn ps-0" rel="noreferrer">

@@ -52,8 +52,8 @@ export const details = [
 
 const KnowUs = ({ toggle }) => {
   return (
-    <div className="bg-light p-4 my-4 rounded" id="know_us">
-      <p className="h2 text-center">Know Us</p>
+    <div className="bg-light p-4 my-4 rounded">
+      {/* <p className="h2 text-center">Know Us</p> */}
 
       <div className="row">
         {names.map((name, i) => (
