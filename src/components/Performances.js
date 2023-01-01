@@ -8,6 +8,8 @@ import raaga_img from "../images/performances/fret-raaga.jpg";
 import seto_naadh_img from "../images/performances/seto_naadh.jpg";
 import four_20_img from "../images/performances/four_20.jpg";
 import baja_gaja_img from "../images/performances/baja_gaja.jpg";
+import music_for_all_img from "../images/performances/music_for_all.jpg"
+import heritage_n_thanks_gvg_img from "../images/performances/heritage_n_thanks_gvg.jpg"
 
 const Performances = () => {
   let eitv_opener_url = "https://youtu.be/5RclRxiWSJA?t=2456";
@@ -18,8 +20,11 @@ const Performances = () => {
   let seto_naadh_url = "https://www.facebook.com/MusicFret/videos/216423477112786";
   let four_20_url = "https://www.facebook.com/MusicFret/videos/216423477112786";
   let baja_gaja_url = "https://www.facebook.com/MusicFret/videos/216423477112786";
+  let music_for_all_url = "https://www.facebook.com/photo?fbid=608820374533191";
+  let heritage_n_thanks_gvg_url = "https://www.facebook.com/photo?fbid=582372557177973";
 
-  const images = [eitv_img, raaga_img, naadhe_img, ritu_img, electrowave_img, seto_naadh_img, four_20_img, baja_gaja_img];
+  const images = [eitv_img, raaga_img, naadhe_img, ritu_img, electrowave_img,
+    seto_naadh_img, four_20_img, baja_gaja_img, music_for_all_img, heritage_n_thanks_gvg_img];
   const linkUrls = [
     eitv_opener_url,
     raga_chikitsa_url,
@@ -28,7 +33,9 @@ const Performances = () => {
     electrowave_url,
     seto_naadh_url,
     four_20_url,
-    baja_gaja_url
+    baja_gaja_url,
+    music_for_all_url,
+    heritage_n_thanks_gvg_url
   ];
   const names = [
     "EITV Opener(Letter from home) 2021",
@@ -39,6 +46,8 @@ const Performances = () => {
     "Philhaal - Setonaadh",
     "4:20",
     "Baja Gaja Chowk",
+    "Music for all",
+    "Heritage & Thanksgiving"
   ];
 
   const handleClick = (pos) => {
