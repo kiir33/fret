@@ -1,20 +1,16 @@
 import React from "react";
 import logo from "../images/logo.png";
 
-const logo_style = {
-  height: '4rem'
-}
-
 const Navbar = () => {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark rounded"
+        className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
         style={{ maxWidth: "1024px", margin: "auto" }}
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="#home">
-            <img src={logo} style={{ maxHeight: "28px", margin: "auto" }} className="rounded" />
+            <img src={logo} alt="Logo" style={{ maxHeight: "28px", margin: "auto" }} className="rounded" />
           </a>
           <button
             className="navbar-toggler"
