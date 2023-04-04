@@ -53,17 +53,19 @@ const Performances = () => {
   const handleClick = (pos) => {
     window.open(linkUrls[pos]);
   };
+
+  let n = images.length;
   return (
     <div className="bg-light p-4 mt-4 rounded" id="performances">
       <p className="h2 text-center">Performances</p>
 
       <div className="row mt-4">
-        {images.map((image, i) => (
+        {images.reverse().map((image, i) => (
           <PerformanceCard
             image={image}
-            title={names[i]}
-            pos={i}
-            key={i}
+            title={names[n-i-1]}
+            pos={n-i-1}
+            key={n-i-1}
             handleClick={handleClick}
           />
         ))}
