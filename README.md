@@ -1,5 +1,5 @@
-# Fret
+# Fret Official
 
-### Dependencies
+## Dependencies
 
-- Node version: 16.19.0
+- Node version: 16.20.0

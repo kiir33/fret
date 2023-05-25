@@ -5,6 +5,8 @@ on: workflow_dispatch
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      RSA_KIRAN: ${{ secrets.SSH_PRIVATE_KEY }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -14,22 +16,34 @@ jobs:
         env:
           cache-name: node-cache
         with:
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          key: node_modules_cache
+          restore-keys: node_modules_cache
+
+      - name: Setup configs for github access
+        run: sh github_actions.sh
 
       - name: Run gh-pages deploy command
-        run: yarn deploy
+        run: yarn run deploy
 
   add-domain:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout gh-pages branch
         uses: actions/checkout@v3
         with:
           ref: gh-pages
+
+      - name: Setup configs for github access
+        run: sh github_actions.sh
           
       - name: Add CNAME file
-        run: ls
+        run: echo 'fretofficial.com' > CNAME
+
+      - name: Commit changes
+        run: |
+          sleep 30
+          git status
+          git add .
+          git commit -m"Added CNAME file"
+          git push origin gh-pages
