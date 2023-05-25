@@ -15,6 +15,7 @@ jobs:
         run: |
           cp github_actions.sh ~/github_actions.sh
           cp CNAME ~/CNAME
+          cd .. & rm -rf fret
 
       - name: Checkout
         uses: actions/checkout@v3
