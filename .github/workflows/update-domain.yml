@@ -16,6 +16,8 @@ jobs:
           cp github_actions.sh ~/github_actions.sh
           cp CNAME ~/CNAME
           cd .. & rm -rf fret
+          pwd
+          ls -lah
 
       - name: Checkout
         uses: actions/checkout@v3
@@ -24,6 +26,8 @@ jobs:
 
       - name: Copy files to repository
         run: |
+          pwd
+          ls -lah
           cp ~/github_actions.sh ./github_actions.sh
           cp ~/CNAME ./CNAME
           sh github_actions.sh
