@@ -23,7 +23,6 @@ jobs:
 
       - name: Commit changes
         run: |
-          sleep 30
           git status
           git add CNAME
           git commit -m"Added CNAME file"
