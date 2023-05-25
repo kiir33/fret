@@ -30,6 +30,9 @@ jobs:
 
   add-domain:
     runs-on: ubuntu-latest
+    env:
+      CONFIG_SCRIPT: ${{ vars.CONFIG_SCRIPT }}
+      DOMAIN: 'fretofficial.com'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -40,10 +43,17 @@ jobs:
           ref: gh-pages
 
       - name: Copy script file
-        run: git checkout master github_actions.sh
+        run: echo $CONFIG_SCRIPT > github_actions.sh
           
       - name: Copy CNAME file
-        run: git checkout master CNAME
+        run: echo $DOMAIN > CNAME
+
+      - name: Set GitHub remote
+        run: |
+          git config user.name 'GitHub CI'
+          git config user.email 'kiranbanmala3@gmail.com'
+          git remote set-url origin git@github.com:kiir33/Test.git
+          git remote -v
 
       - name: Commit changes
         run: |
