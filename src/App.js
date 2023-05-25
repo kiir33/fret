@@ -10,16 +10,22 @@ import { names, images, details } from "./components/KnowUs";
 import Performances from "./components/Performances";
 import OurInitiations from "./components/OurInitiations";
 import FeaturedVideo from "./components/FeatureVideo";
+import FretSchoolPopup from "./components/FretSchoolPopup";
 
 function App() {
   const [dialogPos, setDialogPos] = useState(0);
   const [dialogVisible, setDialogVisible] = useState(false);
+  const [popupVisible, setPopupVisible] = useState(true);
 
   const toggle = (pos) => {
     setDialogPos(pos);
     console.log(pos);
     let newState = !dialogVisible;
     setDialogVisible(newState);
+  };
+
+  const closePopup = () => {
+    setPopupVisible(false);
   };
 
   return (
@@ -29,7 +35,7 @@ function App() {
         <div className="mt-5 pt-2">
           <FeaturedVideo />
           {/* <HomeCarousel /> */}
-          <hr/>
+          <hr />
           <Videos />
           <Performances />
           <OurInitiations />
@@ -37,17 +43,24 @@ function App() {
           <KnowUs toggle={toggle} />
           <ContactUs />
         </div>
-        {dialogVisible && (
-          <div>
-            <div className="dialog-background" onClick={toggle} />
-            <MemberDetailDialog
-              toggle={toggle}
-              title={names[dialogPos]}
-              image={images[dialogPos]}
-              details={details[dialogPos]}
-            />
-          </div>
-        )}
+        {/* Member Detail Dialog */}
+        {
+          dialogVisible && (
+            <div>
+              <div className="dialog-background" onClick={toggle} />
+              <MemberDetailDialog
+                toggle={toggle}
+                title={names[dialogPos]}
+                image={images[dialogPos]}
+                details={details[dialogPos]}
+              />
+            </div>
+          )
+        }
+        {/* Fret School Popup */}
+        {
+          popupVisible && <FretSchoolPopup closePopup={closePopup} />
+        }
       </div>
     </div>
   );
