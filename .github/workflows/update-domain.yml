@@ -6,35 +6,29 @@ jobs:
   add-domain:
     runs-on: ubuntu-latest
     env:
-      DOMAIN: 'fretofficial.com'
-      CONFIG_SCRIPT: ${{ vars.CONFIG_SCRIPT }}
       RSA_KIRAN: ${{ secrets.SSH_PRIVATE_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Copy files to home path
+        run: |
+          cp github_actions.sh ~/github_actions.sh
+          cp CNAME ~/CNAME
 
       - name: Checkout
         uses: actions/checkout@v3
         with:
           ref: gh-pages
 
-      - name: Copy script file
-        run: echo $CONFIG_SCRIPT > github_actions.sh
-          
-      - name: Copy CNAME file
-        run: echo $DOMAIN > CNAME
-
-      - name: Set GitHub remote
+      - name: Copy files to repository
         run: |
-          git config user.name 'GitHub CI'
-          git config user.email 'kiranbanmala3@gmail.com'
-          git remote set-url origin git@github.com:kiir33/Test.git
-          git remote -v
+          cp ~/github_actions.sh ./github_actions.sh
+          cp ~/CNAME ./CNAME
+          sh github_actions.sh
 
       - name: Commit changes
-        run: |
-          chmod +x github_actions.sh
-          sh github_actions.sh
+        run: | 
           git status
           git add CNAME
           git commit -m"Added CNAME file"
