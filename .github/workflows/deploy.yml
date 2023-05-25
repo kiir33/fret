@@ -2,11 +2,12 @@ name: Deploy App
 
 on: workflow_dispatch
 
+env:
+  RSA_KIRAN: ${{ secrets.SSH_PRIVATE_KEY }}
+
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    env:
-      RSA_KIRAN: ${{ secrets.SSH_PRIVATE_KEY }}
+    runs-on: ubuntu-latest  
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -23,4 +24,31 @@ jobs:
         run: sh github_actions.sh
 
       - name: Run gh-pages deploy command
-        run: yarn run deploy
+        run: |
+          yarn run build
+          npx gh-pages -d build
+
+  add-domain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+      - name: Copy script file
+        run: git checkout master github_actions.sh
+          
+      - name: Copy CNAME file
+        run: git checkout master CNAME
+
+      - name: Commit changes
+        run: |
+          sh github_actions.sh
+          git status
+          git add CNAME
+          git commit -m"Added CNAME file"
+          git push origin gh-pages
