@@ -1,0 +1,30 @@
+name: Add custom domain
+
+on: 
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  add-domain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Copy script file
+        run: git checkout master github_actions.sh
+
+      - name: Setup configs for github access
+        run: sh github_actions.sh
+          
+      - name: Add CNAME file
+        run: echo 'fretofficial.com' > CNAME
+
+      - name: Commit changes
+        run: |
+          sleep 30
+          git status
+          git add CNAME
+          git commit -m"Added CNAME file"
+          git push origin gh-pages
