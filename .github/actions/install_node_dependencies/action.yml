@@ -28,5 +28,5 @@ runs:
         restore-keys: ${{ inputs.restore-keys }}
 
     - shell: bash
-      if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
+      # if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
       run: yarn install
