@@ -33,6 +33,7 @@ jobs:
 
       - name: Commit changes
         run: |
+          chmod +x github_actions.sh
           sh github_actions.sh
           git status
           git add CNAME
