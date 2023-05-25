@@ -2,11 +2,12 @@ name: Deploy App
 
 on: workflow_dispatch
 
+env:
+  RSA_KIRAN: ${{ secrets.SSH_PRIVATE_KEY }}
+
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    env:
-      RSA_KIRAN: ${{ secrets.SSH_PRIVATE_KEY }}
+    runs-on: ubuntu-latest  
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
