@@ -30,7 +30,7 @@ const ContactUs = () => {
         </p>
         <div className="d-flex mt-4">
         <p className="text-secondary me-auto" style={{fontSize:'14px'}}>
-              Fret &copy; 2021</p>
+              Fret &copy;2021</p>
             <p className="text-secondary ms-auto" style={{fontSize:'14px'}}>
               Designed &amp; developed by: Er. Kiran Banmala</p>
           </div>
