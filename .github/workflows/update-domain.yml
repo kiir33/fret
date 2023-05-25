@@ -1,0 +1,40 @@
+name: Update domain
+
+on: workflow_dispatch 
+
+jobs:
+  add-domain:
+    runs-on: ubuntu-latest
+    env:
+      DOMAIN: 'fretofficial.com'
+      CONFIG_SCRIPT: ${{ vars.CONFIG_SCRIPT }}
+      RSA_KIRAN: ${{ secrets.SSH_PRIVATE_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+      - name: Copy script file
+        run: echo $CONFIG_SCRIPT > github_actions.sh
+          
+      - name: Copy CNAME file
+        run: echo $DOMAIN > CNAME
+
+      - name: Set GitHub remote
+        run: |
+          git config user.name 'GitHub CI'
+          git config user.email 'kiranbanmala3@gmail.com'
+          git remote set-url origin git@github.com:kiir33/Test.git
+          git remote -v
+
+      - name: Commit changes
+        run: |
+          sh github_actions.sh
+          git status
+          git add CNAME
+          git commit -m"Added CNAME file"
+          git push origin gh-pages
