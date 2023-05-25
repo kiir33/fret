@@ -24,4 +24,4 @@ const MemberDetailDialog = ({ title, details, image, toggle }) => {
   )
 }
 
-export default MemberDetailDialog
+export default MemberDetailDialog;
