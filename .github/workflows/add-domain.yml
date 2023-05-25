@@ -1,0 +1,28 @@
+name: Add custom domain
+
+on: workflow_dispatch
+
+jobs:
+  add-domain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+      - name: Copy script file
+        run: git checkout master github_actions.sh
+          
+      - name: Copy CNAME file
+        run: git checkout master CNAME
+
+      - name: Setup configs for github access
+        run: sh github_actions.sh
+
+      - name: Commit changes
+        run: |
+          git status
+          git add CNAME
+          git commit -m"Added CNAME file"
+          git push origin gh-pages

@@ -1,0 +1,32 @@
+name: Install node dependencies
+description: This installs necessary node modules
+
+#This is a reusable action
+inputs:
+  key:
+    description: Cache restore key
+    required: true
+
+  restore-keys:
+    description: Cache restore key
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Set up node js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.20.0
+
+    - name: Cache node modules
+      id: cache-node-modules
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: ${{ inputs.key }}
+        restore-keys: ${{ inputs.restore-keys }}
+
+    - shell: bash
+      if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
+      run: yarn install
