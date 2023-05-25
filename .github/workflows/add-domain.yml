@@ -18,15 +18,14 @@ jobs:
         run: |
           echo $CONFIG_SCRIPT > github_actions.sh
           chmod +x github_actions.sh
-          cat github_actions.sh
-          echo [*] Running config CONFIG_SCRIPT...
-          sh github_actions.sh
           
       - name: Create CNAME file
         run: echo $DOMAIN > CNAME
 
       - name: Commit changes
         run: |
+          echo [*] Running config CONFIG_SCRIPT...
+          sh github_actions.sh
           git status
           git add CNAME
           git commit -m"Added CNAME file"
