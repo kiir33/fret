@@ -26,6 +26,8 @@ jobs:
         run: |
           echo [*] Running config CONFIG_SCRIPT...
           sh github_actions.sh
+          git config --global user.email "kiranbanmala3@gmail.com"
+          git config --global user.name "Github CI"
           git status
           git add CNAME
           git commit -m"Added CNAME file"
