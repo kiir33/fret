@@ -29,7 +29,7 @@ jobs:
 
       - name: Commit changes
         run: | 
-          git pull
+          git pull --ff-only
           git status
           git add CNAME
           git commit -m"Added CNAME file"
