@@ -29,6 +29,7 @@ jobs:
 
       - name: Commit changes
         run: | 
+          gti pull
           git status
           git add CNAME
           git commit -m"Added CNAME file"
