@@ -1,0 +1,37 @@
+name: React app deployment
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      RSA_KIRAN: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          # Examples: 12.x, 10.15.1, >=10.15.0, lts/Hydrogen, 16-nightly, latest, node
+          node-version: '16.20.0'
+
+      - name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node_modules_cache
+          restore-keys: node_modules_cache
+
+      - name: Install node dependencies
+        run: npm install
+
+      - name: Setup configs for github access
+        run: sh github_actions.sh
+
+      - name: Run deploy command
+        run: npm run deploy
