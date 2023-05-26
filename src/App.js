@@ -1,16 +1,18 @@
 import { useState } from "react";
-import MemberDetailDialog from "./components/MemberDetailDialog";
-// import HomeCarousel from "./components/HomeCarousel";
+import { imageBaseUrl } from "./Links";
 import Intro from "./components/Intro";
-import KnowUs from "./components/KnowUs";
 import Navbar from "./components/Navbar";
-import Videos from "./components/Videos";
 import ContactUs from "./components/ContactUs";
-import { names, images, details } from "./components/KnowUs";
-import Performances from "./components/Performances";
-import OurInitiations from "./components/OurInitiations";
+import Videos from "./components/videos/Videos";
+import KnowUs from "./components/know_us/KnowUs";
+import Announcement from "./banners/Announcement";
+import HomeCarousel from "./components/HomeCarousel";
 import FeaturedVideo from "./components/FeatureVideo";
+import members from "./components/know_us/MembersData";
 import FretSchoolPopup from "./components/FretSchoolPopup";
+import Performances from "./components/performances/Performances";
+import OurInitiations from "./components/initiations/OurInitiations";
+import MemberDetailDialog from "./components/know_us/MemberDetailDialog";
 
 function App() {
   const [dialogPos, setDialogPos] = useState(0);
@@ -34,13 +36,15 @@ function App() {
         <Navbar />
         <div className="mt-5 pt-2">
           <FeaturedVideo />
-          {/* <HomeCarousel /> */}
+          <hr />
+          <Announcement />
           <hr />
           <Videos />
           <Performances />
           <OurInitiations />
           <Intro />
           <KnowUs toggle={toggle} />
+          <HomeCarousel />
           <ContactUs />
         </div>
         {/* Member Detail Dialog */}
@@ -50,9 +54,9 @@ function App() {
               <div className="dialog-background" onClick={toggle} />
               <MemberDetailDialog
                 toggle={toggle}
-                title={names[dialogPos]}
-                image={images[dialogPos]}
-                details={details[dialogPos]}
+                title={members[dialogPos].name}
+                image={imageBaseUrl + members[dialogPos].image}
+                details={members[dialogPos].details}
               />
             </div>
           )

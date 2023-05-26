@@ -1,7 +1,9 @@
 import React from "react";
-import logo from "../images/logo.png";
+import { imageBaseUrl } from "../Links";
 
 const Navbar = () => {
+  const logo = imageBaseUrl + "241193798-95c047c7-d716-4f7f-9f30-12b64520f76b.png";
+
   return (
     <div>
       <nav
