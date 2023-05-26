@@ -5,11 +5,11 @@ import Navbar from "./components/Navbar";
 import ContactUs from "./components/ContactUs";
 import Videos from "./components/videos/Videos";
 import KnowUs from "./components/know_us/KnowUs";
-import Announcement from "./banners/Announcement";
 import HomeCarousel from "./components/HomeCarousel";
 import FeaturedVideo from "./components/FeatureVideo";
 import members from "./components/know_us/MembersData";
 import FretSchoolPopup from "./components/FretSchoolPopup";
+import Announcement from "./components/banners/Announcement";
 import Performances from "./components/performances/Performances";
 import OurInitiations from "./components/initiations/OurInitiations";
 import MemberDetailDialog from "./components/know_us/MemberDetailDialog";
@@ -31,16 +31,14 @@ function App() {
   };
 
   return (
-    <div className="main-container">
+    <div className="main-container px-2">
       <div className="secondary-container">
         <Navbar />
-        <div className="mt-5 pt-2">
-          <FeaturedVideo />
-          <hr />
+        <div className="mt-5 pt-3">
           <Announcement />
-          <hr />
           <Videos />
           <Performances />
+          <FeaturedVideo />
           <OurInitiations />
           <Intro />
           <KnowUs toggle={toggle} />

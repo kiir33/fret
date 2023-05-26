@@ -1,12 +1,14 @@
 import React from 'react'
 import VideoCard from './VideoCard'
-import { registrationLink } from '../../Links'
+import UpcomingAlbum from '../banners/UpcomingAlbum';
 
 const Videos = () => {
   const videos = require('./VideosData.json');
   return (
-    <div className="row my-4 p-4">
-      <p className="h4 text-center" id="our_creations">Our Creations</p>
+    <div id="our_creations" className="row pt-4">
+      {/* <p className="h2 text-center" >Our Creations</p> */}
+
+      <UpcomingAlbum />
 
       {
         videos.map((video, i) => (

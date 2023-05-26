@@ -16,6 +16,10 @@ const HomeCarousel = () => {
       "image": "241194022-49d276cf-1f4a-429b-a0ee-136d1322f0e7.jpg"
     },
     {
+      "caption": "Fret Performing at Patan",
+      "image": "241267122-cc1ec3c2-159f-48b2-85fa-b35c4d828169.jpg"
+    },
+    {
       "caption": text4,
       "image": "241194024-df3e9d61-957d-4552-81d9-14244aa30f08.jpg"
     },
@@ -44,15 +48,16 @@ const HomeCarousel = () => {
   return (
     <div className="carousel-container" id="home">
       <Carousel className="carousel-container" showThumbs={false}
-        useKeyboardArrows={true} infiniteLoop={true} >
+        useKeyboardArrows={true} infiniteLoop={true} showStatus={false} >
         {
           carouselImages.map((carousel) => {
             let image = imageBaseUrl + carousel.image;
             return (
               <div>
-                <img src={image} className="carousel-image rounded" alt={carousel.caption} />
+                <img src={image} className="carousel-image" alt={carousel.caption} />
                 <p className="legend text-info">{carousel.caption}</p>
-              </div>);
+              </div>
+            );
           })
         }
       </Carousel>

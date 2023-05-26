@@ -9,12 +9,12 @@ const Performances = () => {
   };
 
   return (
-    <div className="bg-light p-4 mt-4 rounded" id="performances">
-      <p className="h2 text-center">Performances</p>
+    <div className="bg-light p-4 mt-1 rounded" id="performances">
+      <p className="h2 text-center text-uppercase">Performances</p>
 
       <div className="row mt-4">
         {performances.reverse().map((performance) => (
-          <PerformanceCard
+        <PerformanceCard
             performance={performance}
             key={performance.id}
             handleClick={handleClick}

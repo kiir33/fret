@@ -4,7 +4,7 @@ import members from "./MembersData";
 
 const KnowUs = ({ toggle }) => {
   return (
-    <div className="bg-light p-4 my-4 rounded">
+    <div className="p-2 bg-light rounded mb-4">
       {/* <p className="h2 text-center">Know Us</p> */}
 
       <div className="row">
