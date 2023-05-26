@@ -2,10 +2,10 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <div className="row p-4" id="know_us">
-      <p className="h4 text-center fw-bolder my-4">Know Us</p>
-      <div className="mx-auto my-2">
-        <p>
+    <div className="row" id="know_us">
+      <p className="h2 text-center text-uppercase my-4">Know Us</p>
+      <div className="mx-auto fw-light">
+        <p style={{ textAlign: 'justify' }} >
           Fret is an instrumental trio from Nepal, creating new forms of music,
           furnishing fusion grooves in an evolved manner blending traditional
           and ethnic music with an influence of eastern classical, western music
@@ -16,9 +16,6 @@ const Intro = () => {
           distinct world music genre.
         </p>
       </div>
-      {/* <div className="mx-auto my-2 col-md-12 col-lg-4">
-        <img src={cover} className="img-fluid rounded" />
-      </div> */}
     </div>
   );
 };
