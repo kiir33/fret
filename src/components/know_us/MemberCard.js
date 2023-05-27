@@ -6,7 +6,7 @@ const MemberCard = ({ member, pos, toggle }) => {
   let title = member.name;
   let image = imageBaseUrl + member.image;
   return (
-    <div className="col-md-4 col-sm-12 my-md-0 my-sm-2">
+    <div className="col-md-4 col-sm-12 member-card">
       <div className="card bg-body shadow">
         <img className="card-img-top card-member-img" src={image} alt={title} />
         <div className="card-body">

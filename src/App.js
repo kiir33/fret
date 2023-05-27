@@ -31,7 +31,7 @@ function App() {
   };
 
   return (
-    <div className="main-container px-2">
+    <div className="main-container">
       <div className="secondary-container">
         <Navbar />
         <div className="mt-5 pt-3">

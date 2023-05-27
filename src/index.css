@@ -176,6 +176,18 @@ code {
   text-align: center;
 }
 
+.upcoming-container .card-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Verdana, sans-serif;
+  font-size: 24px;
+}
+
+.upcoming-container img{
+  max-height: 250px;
+  max-width: 250px;
+}
+
 .text-uppercase{
   font-family: Helvetica, sans-serif;
 }
@@ -184,21 +196,11 @@ code {
   line-height: 30px;
 }
 
-.upcoming-container .card-text {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: Verdana, sans-serif;
-  font-size: 24px;
+.member-card{
+  margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 768px) {
-  .carousel-container {
-    height: 40vh;
-  }
-
-  .carousel-image {
-    height: 40vh;
-  }
 
   .dialog-inner {
     top: 22vh;
@@ -231,5 +233,36 @@ code {
     left: 6%;
     font-size: large;
     position: absolute;
+  }
+
+  .upcoming-container .card-title {
+    font-size: 22px;
+  }
+  
+  .upcoming-container .card-text {
+    font-size: 14px;
+  }
+
+  .upcoming-container img{
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  .upcoming-container {
+    height: 180px;
+  }
+
+  .member-card{
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  .carousel-container {
+    height: 25vh;
+  }
+
+  .carousel-image {
+    height: 25vh;
   }
 }
