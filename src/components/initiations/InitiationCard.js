@@ -8,7 +8,7 @@ const InitiationCard = ({ initiation }) => {
   return (
     <div className="initiation-card">
       <p className="fs-5 mx-2">{title}</p>
-      <div className="fw-light ps-2" style={{ textAlign: 'justify' }}>
+      <div className="fw-light px-2" style={{ textAlign: 'justify' }}>
         <img className="img-initiations rounded-2 ms-3" src={images[0]} alt={title} />
         {initiation.details}
       </div>
