@@ -249,7 +249,7 @@ code {
   }
 
   .upcoming-container {
-    height: 180px;
+    height: 250px;
   }
 
   .member-card{
@@ -264,5 +264,14 @@ code {
 
   .carousel-image {
     height: 25vh;
+  }
+
+  .upcoming-container img{
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  .upcoming-container {
+    height: 200px;
   }
 }
