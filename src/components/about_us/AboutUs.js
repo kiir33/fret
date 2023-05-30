@@ -2,10 +2,10 @@ import React from "react";
 import MemberCard from "./MemberCard";
 import members from "./MembersData";
 
-const KnowUs = ({ toggle }) => {
+const AboutUs = ({ toggle }) => {
   return (
-    <div className="p-2 bg-light rounded mb-4">
-      {/* <p className="h2 text-center">Know Us</p> */}
+    <div className="rounded px-4 py-2">
+      <p className="h2 text-center text-uppercase mt-4">We Are</p>
 
       <div className="row">
         {members.map((member, i) => (
@@ -21,4 +21,4 @@ const KnowUs = ({ toggle }) => {
   );
 };
 
-export default KnowUs;
+export default AboutUs;

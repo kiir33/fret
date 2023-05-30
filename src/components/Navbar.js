@@ -6,10 +6,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav
-        className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
-        style={{ margin: "auto" }}
-      >
+      <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark m-auto">
         <div className="container-fluid">
           <a className="navbar-brand" href="#home">
             <img src={logo} alt="Logo" style={{ maxHeight: "28px", margin: "auto" }} className="rounded" />

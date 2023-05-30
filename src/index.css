@@ -22,6 +22,10 @@ code {
   margin: auto;
 }
 
+.top-gap {
+  padding-top: 57px;
+}
+
 .carousel-container {
   height: 50vh;
   border-radius: 4px;
@@ -40,7 +44,7 @@ code {
 }
 
 .card-member-img {
-  height: 18rem;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -108,9 +112,10 @@ code {
 .image-initiations-thumbs {
   min-width: 33%;
   width: 100%;
-  height: 25vh;
-  max-height: 360px;
+  height: auto;
+  max-height: 400px;
   object-fit: cover;
+  max-height: 200px;
 }
 
 .popup-container {
@@ -151,6 +156,16 @@ code {
   position: absolute;
 }
 
+.banner-register-btn {
+  background-color: #95B41B;
+  border: #95B41B solid 1px;
+}
+
+.banner-register-btn:hover {
+  background-color: green;
+  border: green solid 2px;
+}
+
 .popup-img {
   object-fit: contain;
   width: 100%;
@@ -158,46 +173,46 @@ code {
 }
 
 .upcoming-container {
-  height: 300px;
   display: flex;
-  padding: 0;
-}
-
-.upcoming-container .card-body {
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(90deg, gray, white 40%, white);
+}
+
+.upcoming-container .title {
+  margin-top: 10px;
+  font-family: Helvetica, sans-serif;
+}
+
+.upcoming-container .image-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.upcoming-container .card-title {
-  font-size: 40px;
-  text-transform: uppercase;
-  font-family: Helvetica, sans-serif;
-  text-align: center;
+.upcoming-container .image-container img {
+  width: 48%;
+  height: 400px;
+  margin: auto;
+  border-radius: 4px;
+  object-fit: cover;
 }
 
-.upcoming-container .card-text {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: Verdana, sans-serif;
-  font-size: 24px;
-}
-
-.upcoming-container img{
-  max-height: 250px;
-  max-width: 250px;
-}
-
-.text-uppercase{
+.text-uppercase {
   font-family: Helvetica, sans-serif;
 }
 
-.fw-light{
+.fw-light {
   line-height: 30px;
 }
 
-.member-card{
-  margin-bottom: 0px;
+.card-member-img {
+  min-height: auto;
+  max-height: 200px;
+}
+
+.feature-video {
+  max-height: 520px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -234,30 +249,9 @@ code {
     font-size: large;
     position: absolute;
   }
-
-  .upcoming-container .card-title {
-    font-size: 22px;
-  }
-  
-  .upcoming-container .card-text {
-    font-size: 14px;
-  }
-
-  .upcoming-container img{
-    max-height: 200px;
-    max-width: 200px;
-  }
-
-  .upcoming-container {
-    height: 250px;
-  }
-
-  .member-card{
-    margin-bottom: 10px;
-  }
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 576px) {
   .carousel-container {
     height: 25vh;
   }
@@ -266,12 +260,17 @@ code {
     height: 25vh;
   }
 
-  .upcoming-container img{
-    max-height: 150px;
-    max-width: 150px;
+  .upcoming-container .image-container img {
+    width: 85%;
+    height: auto;
+    margin: auto;
+  }
+
+  .upcoming-container .image-container .img1 {
+    margin-bottom: 10px;
   }
 
   .upcoming-container {
-    height: 200px;
+    background: linear-gradient(180deg, gray, white 60%, white);
   }
 }

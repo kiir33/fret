@@ -7,20 +7,21 @@ const InitiationCard = ({ initiation }) => {
 
   return (
     <div className="initiation-card">
-      <p className="fs-5 mx-2">{title}</p>
-      <div className="fw-light px-2" style={{ textAlign: 'justify' }}>
-        <img className="img-initiations rounded-2 ms-3" src={images[0]} alt={title} />
+      <br/>
+      <p className="fs-5 px-4">{title}</p>
+      <div className="fw-light px-4" style={{ textAlign: 'justify' }}>
+        <img className="img-initiations rounded ms-2" src={images[0]} alt={title} />
         {initiation.details}
       </div>
       {/* Images */}
-      <div class="row mt-5 initiations-images">
-        <div className="col-md-4 col-sm-6 mx-auto">
+      <div class="row mt-4 initiations-images px-4">
+        <div className="col-md-4">
           <img src={images[1]} alt={title} class="image-initiations-thumbs" />
         </div>
-        <div className="col-md-4 col-sm-6 mx-auto">
+        <div className="col-md-4">
           <img src={images[2]} alt={title} class="image-initiations-thumbs" />
         </div>
-        <div className="col-md-4 mx-auto col-sm-6">
+        <div className="col-md-4">
           <img src={images[3]} alt={title} class="image-initiations-thumbs" />
         </div>
       </div>

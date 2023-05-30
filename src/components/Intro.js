@@ -3,7 +3,7 @@ import React from "react";
 const Intro = () => {
   return (
     <div className="row" id="know_us">
-      <p className="h2 text-center text-uppercase my-4">Know Us</p>
+      <p className="h2 text-center text-uppercase my-4">About Us</p>
       <div className="mx-auto fw-light">
         <p style={{ textAlign: 'justify', padding: '0 0.5rem' }} >
           Fret is an instrumental trio from Nepal, creating new forms of music,

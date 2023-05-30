@@ -9,10 +9,10 @@ const Performances = () => {
   };
 
   return (
-    <div className="bg-light p-4 mt-1 rounded" id="performances">
+    <div className="bg-light px-4 py-2 rounded" id="performances">
       <p className="h2 text-center text-uppercase">Performances</p>
 
-      <div className="row mt-4">
+      <div className="row">
         {performances.reverse().map((performance) => (
         <PerformanceCard
             performance={performance}
