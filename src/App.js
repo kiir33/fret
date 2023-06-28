@@ -4,21 +4,22 @@ import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import ContactUs from "./components/ContactUs";
 import Videos from "./components/videos/Videos";
+import Albums from "./components/banners/Albums";
 import AboutUs from "./components/about_us/AboutUs";
 import HomeCarousel from "./components/HomeCarousel";
 import FeaturedVideo from "./components/FeatureVideo";
 import members from "./components/about_us/MembersData";
 import FretSchoolPopup from "./components/FretSchoolPopup";
 import Announcement from "./components/banners/Announcement";
-import UpcomingAlbum from "./components/banners/UpcomingAlbum";
 import Performances from "./components/performances/Performances";
+import OngoingProjects from "./components/banners/OngoingProjects";
 import OurInitiations from "./components/initiations/OurInitiations";
 import MemberDetailDialog from "./components/about_us/MemberDetailDialog";
 
 function App() {
   const [dialogPos, setDialogPos] = useState(0);
   const [dialogVisible, setDialogVisible] = useState(false);
-  const [popupVisible, setPopupVisible] = useState(false);
+  const [popupVisible, setPopupVisible] = useState(true);
 
   const toggle = (pos) => {
     setDialogPos(pos);
@@ -36,14 +37,15 @@ function App() {
       <div className="secondary-container">
         <Navbar />
         <div className="top-gap">
-          <HomeCarousel/>
+          <HomeCarousel />
           <Intro />
-          <FeaturedVideo />
+          <Albums />
           <Videos />
+          <FeaturedVideo />
           <Performances />
           <AboutUs toggle={toggle} />
           <OurInitiations />
-          <UpcomingAlbum />
+          <OngoingProjects />
           <Announcement />
           <ContactUs />
         </div>

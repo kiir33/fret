@@ -4,7 +4,7 @@ import VideoCard from './VideoCard'
 const Videos = () => {
   const videos = require('./VideosData.json');
   return (
-    <div id="our_creations" className="row px-4">
+    <div id="our_creations" className="row">
       {/* <p className="h2 text-center" >Our Creations</p> */}
       {
         videos.map((video, i) => (

@@ -126,6 +126,7 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -172,7 +173,7 @@ code {
   height: 100%;
 }
 
-.upcoming-container {
+.ongoing-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,22 +181,42 @@ code {
   background: linear-gradient(90deg, gray, white 40%, white);
 }
 
-.upcoming-container .title {
+.ongoing-container .title {
   margin-top: 10px;
   font-family: Helvetica, sans-serif;
 }
 
-.upcoming-container .image-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.upcoming-container .image-container img {
-  width: 48%;
+.ongoing-container .image-container img {
+  width: auto;
   height: 400px;
   margin: auto;
   border-radius: 4px;
   object-fit: cover;
+}
+
+.albums {
+  margin: auto;
+  background: url('https://noodlerex.com.np/media/artists/Cover_Fret.jpg');
+  background-size: cover;
+}
+
+.albums .album-cover{
+  width: auto;
+  height: 250px;
+  margin: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.albums .album-details{
+  background: #00000066;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.noodle-logo{
+  height: auto;
+  width: 110px;
 }
 
 .text-uppercase {
@@ -249,6 +270,12 @@ code {
     font-size: large;
     position: absolute;
   }
+
+  .ongoing-container .image-container img {
+    width: 40%;
+    height: auto;
+    margin: auto;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -260,17 +287,25 @@ code {
     height: 25vh;
   }
 
-  .upcoming-container .image-container img {
+  .ongoing-container .image-container img {
     width: 85%;
     height: auto;
     margin: auto;
   }
 
-  .upcoming-container .image-container .img1 {
-    margin-bottom: 10px;
+  .ongoing-container .image-container .img1 {
+    margin-bottom: 0.5rem;
   }
 
-  .upcoming-container {
+  .ongoing-container {
     background: linear-gradient(180deg, gray, white 60%, white);
+  }
+
+  .albums .image-container .album-cover {
+    max-height: 250px;
+  }
+
+  .buy-btn {
+    margin-bottom: 1rem;
   }
 }
